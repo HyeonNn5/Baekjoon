@@ -18,7 +18,7 @@ sort(arr,arr+(배열의 길이 = 마지막 주소 + 1),greater<자료형>());
 bool compare(Student a, Student b){
     if(a.name == b.name){   //이름이 같음 > 나이가 적은 순
         return a.age < b.age;
-    }else{                  //이름 다흠 > 이름 사전순
+    }else{                  //이름 다름 > 이름 사전순
         return a.name < b.name;
     }
 }
