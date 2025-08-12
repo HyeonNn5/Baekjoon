@@ -27,3 +27,11 @@ bool compare(Student a, Student b){
 ---
 
 + 연산자 오버로딩
+
+---
+`stable_sort()`
+
+- `sort`는 불안정 정렬 → 정렬 할 때 순서가 뒤섞일 수 있음
+- `stable_sort`를 쓰면 원래 입력 순서 유지
+
+---
