@@ -2,7 +2,7 @@
 
 ```cpp
 // 생성 
-stack<int> stack;
+stack<type> stack;
 ```
 
 ---
