@@ -1,7 +1,6 @@
 `#include <stack>`
 
 ```cpp
-// 생성 
 stack<type> stack;
 ```
 
