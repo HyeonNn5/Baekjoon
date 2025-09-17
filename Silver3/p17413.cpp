@@ -2,25 +2,27 @@
 #include <algorithm>
 #include <stack>
 using namespace std;
-void stack_flush(stack<char> stack){
-    while(!stack.empty()){
-        res+=stack.top();
-        stack.pop();
+
+stack<char> st;
+string res="";
+
+void stack_flush(){
+    while(!st.empty()){
+        res+=st.top();
+        st.pop();
     }
 }
  
 int main(void){
     ios::sync_with_stdio(false);
     cin.tie(0); cout.tie(0);
-
     // 공백과 <> 단위로 끊어서 스택
-    stack<char> stack;
-    string str,res="";
+    string str;
     getline(cin, str);
     bool b=false;
     for (auto s: str){
         if (s=='<'){
-            stack_flush(stack);
+            stack_flush();
             b= true;
         }else if(s=='>'){
             b=false;
@@ -31,13 +33,13 @@ int main(void){
             res+=s;
         }else{
             if(s==' '){
-                stack_flush(stack);
+                stack_flush();
                 res+=s;
             }else{
-                stack.push(s);
+                st.push(s);
             }
         }
     }
-    stack_flush(stack);
+    stack_flush();
     cout << res;
 }
