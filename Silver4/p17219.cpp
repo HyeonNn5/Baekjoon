@@ -8,16 +8,16 @@ int main(void){
     cin.tie(0);cout.tie(0);
     int n,m;
     cin >> n >> m;
-    //해시맵
     unordered_map<string,string> pwd;
     for(int i=0;i<n;i++){
-        string s1,s2;
-        cin >> s1 >> s2;
-        pwd.insert(make_pair(s1,s2));
+        string adress,password;
+        cin >> adress >> password;
+        pwd.insert(make_pair(adress,password));
     }
     for(int i=0;i<m;i++){
         string str;
         cin >> str;
+        //first(key) second(value)
         cout << pwd.find(str)->second <<endl;
     }
 }
